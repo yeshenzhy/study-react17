@@ -21,7 +21,8 @@
     "lint": "prettier --write",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -48,12 +49,8 @@
     "lint-staged": "^11.2.3",
     "prettier": "2.4.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,css,md,ts,tsx}": "prettier --write"
+    "*.{js,css,md,ts,tsx}": "prettier --write",
+    "*.{js,css,md}": "prettier --write"
   }
 }
