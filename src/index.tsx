@@ -1,3 +1,9 @@
+/*
+ * @Author: zhy
+ * @Date: 2021-10-22 17:29:46
+ * @Description: 
+ * @LastEditTime: 2021-10-22 17:56:37
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -6,6 +12,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    
     <App />
   </React.StrictMode>,
   document.getElementById('root')
