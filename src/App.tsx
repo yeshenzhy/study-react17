@@ -5,7 +5,7 @@
  * @LastEditTime: 2021-10-22 18:46:02
  */
 import React from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import {ProjectListScreen} from 'screens/project-list/index'
 function App() {
