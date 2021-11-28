@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import * as qs from 'qs'
 import { List } from "./list"
 import { SearchPanel } from "./search-panel"
-import { clearObject, useDebounce } from "utils"
+import { clearObject, useDebounce, useArray } from "utils"
 const apiUrl = process.env.REACT_APP_API_URL
 export const ProjectListScreen = () => {
   const [param, setParam]  = useState({
@@ -27,8 +27,17 @@ export const ProjectListScreen = () => {
       }
     })
   }, [])
+  const person:{name:string}[] = [{
+    name: 'tom'
+  }]
+  const {add,removeIndex,clear, value} = useArray(person)
   return <div>
     <SearchPanel param={param} users={users} setParam={setParam}></SearchPanel>
     <List list={list} users={users}></List>
+    <button onClick={() => add({name:'tom2'})}></button>
+    {value.map((item:{name: string}, index) => (
+      <div key={index}>{item.name}</div>
+    ))}
+    <div ></div>
   </div>
 }
