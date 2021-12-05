@@ -18,6 +18,8 @@ export const login = (data: {username: string, password: string}) => {
   }).then(async (response:Response) => {
     if (response.ok) {
       return handleUserResponse( await response.json())
+    } else {
+      return Promise.reject(data);
     }
   })
  }
@@ -31,7 +33,9 @@ export const register = (data: {username: string, password: string}) => {
   }).then(async (response:Response) => {
     if (response.ok) {
       return handleUserResponse( await response.json())
+    } else {
+      return Promise.reject(data);
     }
   })
  }
-export const loginOut = () => window.localStorage.removeItem('localStorageKey');
+export const loginOut = async () => window.localStorage.removeItem('localStorageKey');
