@@ -1,7 +1,7 @@
 import { User } from 'screens/project-list/search-panel'
 const localStorageKey = '__auth_provider_token__';
 const apiUrl = process.env.REACT_APP_API_URL
-export const getToken = () => window.localStorage.getItem('localStorageKey');
+export const getToken = () => window.localStorage.getItem(localStorageKey);
 
 export const handleUserResponse = ({user}: {user: User}) => {
   window.localStorage.setItem(localStorageKey, user.token ?? '');
@@ -38,4 +38,4 @@ export const register = (data: {username: string, password: string}) => {
     }
   })
  }
-export const loginOut = async () => window.localStorage.removeItem('localStorageKey');
+export const loginOut = async () => window.localStorage.removeItem(localStorageKey);

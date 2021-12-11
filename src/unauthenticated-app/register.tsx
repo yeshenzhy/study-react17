@@ -3,7 +3,7 @@ import React, { FormEvent } from "react"
 
 
 export const RegisterScreen = () => {
-  const { register, user } = useAuth();
+  const { register } = useAuth();
   // 提交表单
   const handleSubmit = (event:FormEvent<HTMLFormElement>) => {
     event.preventDefault();
