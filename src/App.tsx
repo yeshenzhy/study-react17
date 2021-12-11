@@ -4,16 +4,16 @@
  * @Description:
  * @LastEditTime: 2021-10-22 18:46:02
  */
+import { AuthenicatedApp } from "authenticated-app";
+import { useAuth } from "context/auth-context";
 import React from "react";
-// import logo from "./logo.svg";
+import { UnauthenticatedApp } from "unauthenticated-app";
 import "./App.css";
-import {ProjectListScreen} from 'screens/project-list/index'
-import { LoginScreen } from 'login/index'
-function App() {
+const App = () => {
+  const {user} = useAuth();
   return (
     <div className="App">
-      {/* <ProjectListScreen></ProjectListScreen> */}
-      <LoginScreen></LoginScreen>
+      {user ? <AuthenicatedApp></AuthenicatedApp> : <UnauthenticatedApp></UnauthenticatedApp>}
     </div>
   );
 }
