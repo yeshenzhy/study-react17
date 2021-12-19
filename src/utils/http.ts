@@ -41,3 +41,28 @@ export const useHttp = () => {
   // ts 操作符
   return (...[endPoint, config]: Parameters<typeof http>) => http(endPoint, {...config, token: user?.token})
 }
+
+// type Person = {
+//   name: string,
+//   age: number
+// }
+
+// type PersonKeys = keyof Person;
+
+// type age = Exclude<PersonKeys, 'name'>
+
+// const fn = () => {
+//   return {
+//     name: 'lin',
+//     age: 18
+//   }
+// }
+
+// const fn1 = ():(string|number)[] => {
+//   return [18, 'lin']
+// }
+
+// // type r1 = { name: string; age: number; }
+// type r1 = ReturnType<typeof fn>
+// // type r2 = (string | number)[]
+// type r2= ReturnType<typeof fn1>

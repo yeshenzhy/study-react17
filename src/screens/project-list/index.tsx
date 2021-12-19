@@ -2,7 +2,7 @@ import React from "react"
 import { useEffect, useState } from "react"
 import { List } from "./list"
 import { SearchPanel } from "./search-panel"
-import { clearObject, useDebounce, useArray } from "utils"
+import { clearObject, useDebounce } from "utils"
 import { useHttp } from "utils/http"
 export const ProjectListScreen = () => {
   const [param, setParam]  = useState({
