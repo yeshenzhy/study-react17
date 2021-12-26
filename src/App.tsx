@@ -13,6 +13,7 @@ const App = () => {
   const {user} = useAuth();
   return (
     <div className="App">
+      222
       {user ? <AuthenicatedApp></AuthenicatedApp> : <UnauthenticatedApp></UnauthenticatedApp>}
     </div>
   );
